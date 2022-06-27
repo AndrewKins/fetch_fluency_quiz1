@@ -42,6 +42,28 @@ async function searchPosts(searchWord) {
   const getPosts = postsData.filter(post => post.body === searchWord)
   return getPosts
 }
+
+// Create a form dynamically
+const form = document.createElement("form");
+form.setAttribute("method", "post");
+form.setAttribute("action", "submit.php");
+
+let SearchInput = document.createElement("input");
+    SearchInput.setAttribute("type", "text");
+    SearchInput.setAttribute("name", "Search");
+    SearchInput.setAttribute("placeholder", "Search User Name");
+
+var submit = document.createElement("input");
+    submit.setAttribute("type", "submit");
+    submit.setAttribute("value", "Submit");
+
+form.appendChild(SearchInput);
+
+
+
+
+
+
 module.exports = {
   getPost,
   getUsers,
